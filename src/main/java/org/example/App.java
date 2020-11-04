@@ -13,8 +13,22 @@ public class App
         //for (int i:array) {
         for (int i=0;i<3;i++){
             System.out.println(array[i]);
+
         }
 
         //2
+        int nr = 5;
+        int index = indexOf(array, nr);
+
+
+
+
     }
+
+    public static int indexOf(int[] array){
+        int index =
+        return (index);
+
+    }
+
 }
