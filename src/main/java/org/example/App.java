@@ -25,22 +25,37 @@ public class App
         //3
         String[] array = {"Paris", "London", "New York", "Stockholm"};
         System.out.printf("String array: [");
-        int counter = 0;
+        int counter = 1;
         for (String names:array){
             System.out.printf(names);
-            if (counter < array.length) System.out.printf(",");
+            if (counter < array.length) System.out.printf(", ");
             counter++;
         }
         System.out.println("]");
         Arrays.sort(array);
         System.out.printf("Sort String array: [");
-        counter = 0;
+        counter = 1;
         for (String names:array){
             System.out.printf(names);
-            if (counter < array.length) System.out.printf(",");
+            if (counter < array.length) System.out.printf(", ");
             counter++;
         }
         System.out.println("]");
+
+        //4
+        int[] nrArray1={1,15,20};
+        System.out.printf("Elements from first array: ");
+        for (int numbers:nrArray1) {
+            System.out.printf(numbers + " ");
+        }
+        System.out.println("");
+        int[] nrArray2 =Arrays.copyOf(nrArray1,3);
+        System.out.printf("Elements from second array: ");
+        for (int numbers:nrArray2) {
+            System.out.printf(numbers + " ");
+        }
+        System.out.println("");
+
 
 
 
