@@ -8,6 +8,13 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        //1
+        int array[] = new int[] {11, 23, 39};
+        //for (int i:array) {
+        for (int i=0;i<3;i++){
+            System.out.println(array[i]);
+        }
+
+        //2
     }
 }
