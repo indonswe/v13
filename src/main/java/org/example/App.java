@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Arrays;
+
 /**
  * Hello world!
  *
@@ -9,18 +11,36 @@ public class App
     public static void main( String[] args )
     {
         //1
-        int array[] = new int[] {11, 23, 5};
-        //for (int i:array) {
+        int arrayInt[] = new int[] {11, 23, 5};
         for (int i=0;i<3;i++){
-            System.out.println(array[i]);
+            System.out.println(arrayInt[i]);
 
         }
 
         //2
         int nr = 5;
-        int index = indexOf(array, nr);
+        int index = indexOf(arrayInt, nr);
         System.out.println("Index position of number " + nr + " is " + index);
 
+        //3
+        String[] array = {"Paris", "London", "New York", "Stockholm"};
+        System.out.printf("String array: [");
+        int counter = 0;
+        for (String names:array){
+            System.out.printf(names);
+            if (counter < array.length) System.out.printf(",");
+            counter++;
+        }
+        System.out.println("]");
+        Arrays.sort(array);
+        System.out.printf("Sort String array: [");
+        counter = 0;
+        for (String names:array){
+            System.out.printf(names);
+            if (counter < array.length) System.out.printf(",");
+            counter++;
+        }
+        System.out.println("]");
 
 
 
@@ -40,6 +60,10 @@ public class App
 
         return (index);
 
+
+
     }
+
+
 
 }
