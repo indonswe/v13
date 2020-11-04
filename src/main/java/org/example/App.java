@@ -1,5 +1,7 @@
 package org.example;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Arrays;
 
 /**
@@ -64,6 +66,36 @@ public class App
         dArrays[1][1]= "Stockholm";
         System.out.println(dArrays[0][0] + " " + dArrays[0][1]);
         System.out.println(dArrays[1][0] + " " + dArrays[1][1]);
+
+        //6
+        int[] values = {43,5,23,17,2,14};
+        float sum= (float) 0.0;
+        for (int total:values){
+            sum += total;
+        }
+        sum = sum/6;
+        //DecimalFormat formatter = new DecimalFormat("#0.0");
+        //formatter = sum;
+        //System.out.println(formatter.format(sum));
+        System.out.printf("Average is: %.1f %n", sum); //Tried a fem things but get "," instead of point
+
+        //7
+        System.out.println("");
+        int[] tenInt = {1,2,3,4,5,6,7,8,9,10};
+        System.out.printf("Array: ");
+        for (int numbers:tenInt) {
+            System.out.printf(numbers+" ");
+        }
+        System.out.println("");
+        System.out.printf("Odd Array: ");
+        for (int numbers:tenInt) {
+            if (numbers%2 != 0) System.out.printf(numbers+" ");
+        }
+        System.out.println("");
+
+
+
+
 
 
 
