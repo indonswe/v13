@@ -56,6 +56,14 @@ public class App
         }
         System.out.println("");
 
+        //5
+        String[][] dArrays = new String[2][2];
+        dArrays[0][0]= "France";
+        dArrays[0][1]= "Paris";
+        dArrays[1][0]= "Sweden";
+        dArrays[1][1]= "Stockholm";
+        System.out.println(dArrays[0][0] + " " + dArrays[0][1]);
+        System.out.println(dArrays[1][0] + " " + dArrays[1][1]);
 
 
 
