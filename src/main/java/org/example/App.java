@@ -93,6 +93,24 @@ public class App
         }
         System.out.println("");
 
+        //8
+        int duplicateArrays[] = {20,20,40,20,30,40,50,60,50};
+        System.out.printf("Array: ");
+        for (int numbers:tenInt) {
+            System.out.printf(duplicateArrays+" ");
+        }
+        Arrays.sort(duplicateArrays);
+        System.out.println("");
+        System.out.printf("Array without duplicate values: ");
+        for (int numbers:duplicateArrays) {
+            int indexOrg = duplicateArrays[numbers];
+                for (int duoNumbers:duplicateArrays){
+                    indexDuo = Arrays.binarySearch(duplicateArrays, duplicateArrays[numbers]);
+
+                }
+
+        }
+        System.out.println("");
 
 
 
