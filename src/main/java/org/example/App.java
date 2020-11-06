@@ -1,8 +1,12 @@
 package org.example;
 
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Arrays;
+
+import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 
 /**
  * Hello world!
@@ -94,30 +98,56 @@ public class App
         System.out.println("");
 
         //8
-        int duplicateArrays[] = {20,20,40,20,30,40,50,60,50};
+        String duplicateArrays[] = {"20","20","40","20","30","40","50","60","50"};
         System.out.printf("Array: ");
-        for (int numbers:tenInt) {
-            System.out.printf(duplicateArrays+" ");
+        boolean isDeleted = false;
+        for (int duoNumbers=0; duoNumbers<duplicateArrays.length;duoNumbers++) {
+            System.out.printf(duplicateArrays[duoNumbers]+" ");
         }
-        Arrays.sort(duplicateArrays);
         System.out.println("");
         System.out.printf("Array without duplicate values: ");
-        for (int numbers:duplicateArrays) {
-            int indexOrg = duplicateArrays[numbers];
-                for (int duoNumbers:duplicateArrays){
-                    indexDuo = Arrays.binarySearch(duplicateArrays, duplicateArrays[numbers]);
 
-                }
+
+
+        Arrays.sort(duplicateArrays);
+        //for (int numbers:duplicateArrays) {
+
+        String[] newArray = new String[duplicateArrays.length -1];
+
+        //for (int i = 0, j = 1 ; i < duplicateArrays.length; i++, j++){
+        for (int i = 0; i < duplicateArrays.length; i++){
+            //int indexOrg = duplicateArrays[numbers];
+            for (int j=i+1;j<duplicateArrays.length;j++)
+            //if (j >duplicateArrays.length) break;
+            if (duplicateArrays[i].equals(duplicateArrays[j])){
+                isDeleted = true;
+                break;
+                //newArray[j] ="1";
+            }else{
+                newArray[i] = duplicateArrays[i];
+            }
 
         }
+        for (int duoNumbers=0; duoNumbers<newArray.length;duoNumbers++) {
+            System.out.printf(newArray[duoNumbers]+" ");
+        }
         System.out.println("");
+        //System.out.println(newArray);
+            //System.out.println(duplicateArrays[numbers]);
+               // for (int duoNumbers:duplicateArrays){
+                    //indexDuo = Arrays.binarySearch(duplicateArrays, duplicateArrays[numbers]);
+
+                //}
+
+        }
+        //System.out.println("");
 
 
 
 
 
 
-    }
+
 
     public static int indexOf(int[] array, int nr){
         int index = 0;
