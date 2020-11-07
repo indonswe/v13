@@ -166,20 +166,32 @@ public class App
         //11
         String tal1="";
         int rounds=0;
-        String[] value = new String[999];
-        String[] valueCopy = new String[999];
+        String[] value = new String[9];
+        String[] valueCopy = new String[9];
+        char tal=' ';
         do {
             System.out.println("Give me the number 5: ");
             Scanner scNr1 = new Scanner(System.in);
             tal1 = scNr1.nextLine(); // holds actual input
             value[rounds]= tal1;
-        } while ((tal1)!=("5"));
-        for (int i=0,j=value.length;i<value.length;i++,j--) {
+            tal = tal1.charAt(0);
+        } while ((tal)!=('5'));
+        for (int i=0,j=value.length-1;i<value.length-1;i++,j--) {
             valueCopy[i] = value[j];
-            System.out.println(valueCopy);
+            System.out.println(valueCopy[i]);
         }
 
-
+        //12
+        int[][] diagonalArrays = new int[3][3];
+        for(int i = 0;i<3;i++){
+            diagonalArrays[0][i]=i;
+            for (int j=0;j<3;j++){
+                diagonalArrays[i][j]=i;
+            }
+        }
+        for (int i=0,j=0;i<2;i++,j++){
+            System.out.println(diagonalArrays[i][j] + " ");
+        }
 
 
     }
