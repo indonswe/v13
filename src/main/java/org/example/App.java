@@ -213,6 +213,30 @@ public class App
         }
         System.out.println("");
 
+        //13
+        int randomArrays[] = {1,8,9,2,7,4,5,6,3};
+        int sortedArrays[] = new int[9];
+        int lenghtRight = randomArrays.length-1;
+        int lenghtLeft = 0;
+        for (int i=0;i<randomArrays.length;i++){
+            System.out.printf(randomArrays[i] + " ");
+        }
+        for (int i=0;i<randomArrays.length;i++) {
+            if (randomArrays[i]%2==0) {
+               sortedArrays[lenghtRight] = randomArrays[i];
+            }else{
+                sortedArrays[lenghtLeft] = randomArrays[i];
+                lenghtLeft++;
+            }
+        }
+        System.out.println("");
+        for (int i=0;i<randomArrays.length;i++){
+            System.out.printf(sortedArrays[i] + " ");
+        }
+
+
+
+
 
     }
 
