@@ -5,6 +5,7 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.Scanner;
 
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 
@@ -142,20 +143,44 @@ public class App
 
         //10
         int counterMulti =0;
-        int[][] multi = {{1,2,3,4,5,6,7,8,9,10},{11,12,13,14,15,6,7,8,9,10}};
-        int[][] multiPrint = {{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10}};
+        int[][] multi = {{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10}};
+        //int[][] multiPrint = {{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10}};
+        int[][] multiPrint = new int [10][10];
         for (int i=0;i < 10;i++){
 
-            multiPrint [counterMulti][i] = (multi[counterMulti][i]*multi[counterMulti][i]);
-            if (i==8) {
+            multiPrint [counterMulti][i] = (multi[counterMulti][counterMulti]*multi[counterMulti][i]);
+            if (i==9) {
                 if (counterMulti == 1) break;
                 counterMulti = 1;
                 i = 0;
             }
         }
         for (int i=0;i < 10;i++) {
-            System.out.println(multiPrint[0][i]);
+            for (int j = 0; j < 10; j++) {
+                System.out.printf(multiPrint[i][j] + " ");
+                if (i==9||j==9) System.out.println("");
+            }
         }
+        System.out.println("");
+
+        //11
+        String tal1="";
+        int rounds=0;
+        String[] value = new String[999];
+        String[] valueCopy = new String[999];
+        do {
+            System.out.println("Give me the number 5: ");
+            Scanner scNr1 = new Scanner(System.in);
+            tal1 = scNr1.nextLine(); // holds actual input
+            value[rounds]= tal1;
+        } while ((tal1)!=("5"));
+        for (int i=0,j=value.length;i<value.length;i++,j--) {
+            valueCopy[i] = value[j];
+            System.out.println(valueCopy);
+        }
+
+
+
 
     }
 
