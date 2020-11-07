@@ -137,9 +137,7 @@ public class App
         }
         System.out.println("");
 
-        System.out.println("Enter to continue ");
-        Scanner waiting = new Scanner(System.in);
-        String oki =waiting.nextLine(); // holds actual input
+
 
 
         //9
@@ -152,26 +150,26 @@ public class App
         System.out.println("");
 
         //10
+        int multiRounds=0;
         int counterMulti =0;
         int[][] multi = {{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10}};
         //int[][] multiPrint = {{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10}};
         int[][] multiPrint = new int [10][10];
+        System.out.println(multi[1][5]);
         for (int i=0;i < 10;i++){
-
-            multiPrint [counterMulti][i] = (multi[counterMulti][counterMulti]*multi[counterMulti][i]);
-            if (i==9) {
-                if (counterMulti == 1) break;
-                counterMulti = 1;
-                i = 0;
+            for(int j=0;j<10;j++) {
+                multiPrint[i][j] = (multi[0][i] * multi[0][j]);
             }
         }
         for (int i=0;i < 10;i++) {
             for (int j = 0; j < 10; j++) {
                 System.out.printf(multiPrint[i][j] + " ");
-                if (i==9||j==9) System.out.println("");
+                if (j==9) System.out.println("");
             }
         }
         System.out.println("");
+
+
 
         //11
         String tal1="";
@@ -187,9 +185,14 @@ public class App
             tal = tal1.charAt(0);
         } while ((tal)!=('5'));
         for (int i=0,j=value.length-1;i<value.length-1;i++,j--) {
+            System.out.println(value[i]);
             valueCopy[i] = value[j];
             System.out.println(valueCopy[i]);
         }
+
+        System.out.println("Enter to continue ");
+        Scanner waiting = new Scanner(System.in);
+        String oki =waiting.nextLine(); // holds actual input
 
         //12
         int[][] diagonalArrays = new int[3][3];
