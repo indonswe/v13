@@ -123,7 +123,7 @@ public class App
                     isDeleted = true;
                     //--j;
                     break;
-                    //newArray[j] ="1";
+
                 }
             }
             if (isDeleted!=true){
