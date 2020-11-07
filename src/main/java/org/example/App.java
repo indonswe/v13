@@ -101,6 +101,7 @@ public class App
         String duplicateArrays[] = {"20", "20", "40", "20", "30", "40", "50", "60", "50"};
         System.out.printf("Array: ");
         boolean isDeleted = false;
+        int counting = 0;
         for (int duoNumbers = 0; duoNumbers < duplicateArrays.length; duoNumbers++) {
             System.out.printf(duplicateArrays[duoNumbers] + " ");
         }
@@ -111,24 +112,28 @@ public class App
         Arrays.sort(duplicateArrays);
         //for (int numbers:duplicateArrays) {
 
-        String[] newArray = new String[duplicateArrays.length - 1];
+        String[] newArray = new String[duplicateArrays.length];
 
         //for (int i = 0, j = 1 ; i < duplicateArrays.length; i++, j++){
         for (int i = 0; i < duplicateArrays.length; i++) {
             //int indexOrg = duplicateArrays[numbers];
-            for (int j = i + 1; j < duplicateArrays.length; j++)
+            for (int j = i + 1; j < duplicateArrays.length; j++) {
                 //if (j >duplicateArrays.length) break;
                 if (duplicateArrays[i].equals(duplicateArrays[j])) {
                     isDeleted = true;
+                    //--j;
                     break;
                     //newArray[j] ="1";
-                } else {
-                    newArray[i] = duplicateArrays[i];
                 }
-
+            }
+            if (isDeleted!=true){
+                newArray[counting] = duplicateArrays[i];
+                counting ++;
+            }
+            isDeleted = false;
         }
         for (int duoNumbers = 0; duoNumbers < newArray.length; duoNumbers++) {
-            System.out.printf(newArray[duoNumbers] + " ");
+            if (newArray[duoNumbers]!=null) System.out.printf(newArray[duoNumbers] + " ");
         }
         System.out.println("");
 
