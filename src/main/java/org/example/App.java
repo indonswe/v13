@@ -140,6 +140,22 @@ public class App
         }
         System.out.println("");
 
+        //10
+        int counterMulti =0;
+        int[][] multi = {{1,2,3,4,5,6,7,8,9,10},{11,12,13,14,15,6,7,8,9,10}};
+        int[][] multiPrint = {{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10}};
+        for (int i=0;i < 10;i++){
+
+            multiPrint [counterMulti][i] = (multi[counterMulti][i]*multi[counterMulti][i]);
+            if (i==8) {
+                if (counterMulti == 1) break;
+                counterMulti = 1;
+                i = 0;
+            }
+        }
+        for (int i=0;i < 10;i++) {
+            System.out.println(multiPrint[0][i]);
+        }
 
     }
 
