@@ -132,6 +132,11 @@ public class App
         }
         System.out.println("");
 
+        System.out.println("Enter to continue ");
+        Scanner waiting = new Scanner(System.in);
+        String oki =waiting.nextLine(); // holds actual input
+
+
         //9
         int[] addArrayField = new int[]{1,2,3,4,5,6,7};
         addArrayField = add(addArrayField);
@@ -183,15 +188,17 @@ public class App
 
         //12
         int[][] diagonalArrays = new int[3][3];
+        int loopNr = 0;
         for(int i = 0;i<3;i++){
-            diagonalArrays[0][i]=i;
             for (int j=0;j<3;j++){
-                diagonalArrays[i][j]=i;
+                loopNr ++;
+                diagonalArrays[i][j]=loopNr;
             }
         }
-        for (int i=0,j=0;i<2;i++,j++){
-            System.out.println(diagonalArrays[i][j] + " ");
+        for (int i=0,j=0;i<3;i++,j++){
+            System.out.printf(diagonalArrays[i][j] + " ");
         }
+        System.out.println("");
 
 
     }
