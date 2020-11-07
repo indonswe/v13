@@ -183,11 +183,16 @@ public class App
             tal1 = scNr1.nextLine(); // holds actual input
             value[rounds]= tal1;
             tal = tal1.charAt(0);
+            rounds++;
         } while ((tal)!=('5'));
-        for (int i=0,j=value.length-1;i<value.length-1;i++,j--) {
-            System.out.println(value[i]);
+        for (int i=0,j=rounds-1;i<rounds;i++,j--) {
+            System.out.printf(value[i]+" ");
             valueCopy[i] = value[j];
-            System.out.println(valueCopy[i]);
+        }
+        for (int i=0,j=rounds;i<rounds;i++,j--) {
+            System.out.println("");
+            System.out.printf(valueCopy[i]);
+            System.out.println("");
         }
 
         System.out.println("Enter to continue ");
