@@ -19,7 +19,7 @@ public class App
         //1
         int arrayInt[] = new int[]{11, 23, 5};
         for (int i = 0; i < 3; i++) {
-            System.out.printf(String.valueOf(arrayInt[i]) + " ");
+            System.out.printf((arrayInt[i]) + " ");
 
         }
         System.out.println("");
@@ -190,8 +190,8 @@ public class App
         //11
         String tal1="";
         int rounds=0;
-        String[] value = new String[9];
-        String[] valueCopy = new String[9];
+        String[] value = new String[39];
+        String[] valueCopy = new String[39];
         char tal=' ';
         do {
             System.out.println("Give me the number 5: ");
@@ -205,11 +205,11 @@ public class App
             System.out.printf(value[i]+" ");
             valueCopy[i] = value[j];
         }
+        System.out.println("");
         for (int i=0,j=rounds;i<rounds;i++,j--) {
-            System.out.println("");
-            System.out.printf(valueCopy[i]);
-            System.out.println("");
+            System.out.printf(valueCopy[i]+ " ");
         }
+        System.out.println("");
 
         forward();
 
@@ -220,8 +220,11 @@ public class App
             for (int j=0;j<3;j++){
                 loopNr ++;
                 diagonalArrays[i][j]=loopNr;
+                System.out.printf(loopNr +" ");
             }
+            System.out.println("");
         }
+        System.out.println("");
         for (int i=0,j=0;i<3;i++,j++){
             System.out.printf(diagonalArrays[i][j] + " ");
         }
@@ -269,7 +272,6 @@ public class App
 
     public static int indexOf(int[] array, int nr){
         int index = 0;
-        System.out.println(array.length);
         for (int i=0;i<array.length;i++) {
                 if (array[i]==nr){
                     index = i;
