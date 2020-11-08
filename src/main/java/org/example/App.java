@@ -19,14 +19,19 @@ public class App
         //1
         int arrayInt[] = new int[]{11, 23, 5};
         for (int i = 0; i < 3; i++) {
-            System.out.println(arrayInt[i]);
+            System.out.printf(String.valueOf(arrayInt[i]) + " ");
 
         }
+        System.out.println("");
+
+        forward();
 
         //2
         int nr = 5;
         int index = indexOf(arrayInt, nr);
         System.out.println("Index position of number " + nr + " is " + index);
+
+        forward();
 
         //3
         String[] array = {"Paris", "London", "New York", "Stockholm"};
@@ -48,6 +53,8 @@ public class App
         }
         System.out.println("]");
 
+        forward();
+
         //4
         int[] nrArray1 = {1, 15, 20};
         System.out.printf("Elements from first array: ");
@@ -62,6 +69,8 @@ public class App
         }
         System.out.println("");
 
+        forward();
+
         //5
         String[][] dArrays = new String[2][2];
         dArrays[0][0] = "France";
@@ -70,6 +79,8 @@ public class App
         dArrays[1][1] = "Stockholm";
         System.out.println(dArrays[0][0] + " " + dArrays[0][1]);
         System.out.println(dArrays[1][0] + " " + dArrays[1][1]);
+
+        forward();
 
         //6
         int[] values = {43, 5, 23, 17, 2, 14};
@@ -82,6 +93,8 @@ public class App
         //formatter = sum;
         //System.out.println(formatter.format(sum));
         System.out.printf("Average is: %.1f %n", sum); //Tried a fem things but get "," instead of point
+
+        forward();
 
         //7
         System.out.println("");
@@ -96,6 +109,8 @@ public class App
             if (numbers % 2 != 0) System.out.printf(numbers + " ");
         }
         System.out.println("");
+
+        forward();
 
         //8
         String duplicateArrays[] = {"20", "20", "40", "20", "30", "40", "50", "60", "50"};
@@ -137,8 +152,7 @@ public class App
         }
         System.out.println("");
 
-
-
+        forward();
 
         //9
         int[] addArrayField = new int[]{1,2,3,4,5,6,7};
@@ -148,6 +162,8 @@ public class App
             System.out.printf(addArrayField[duoNumbers] + " ");
         }
         System.out.println("");
+
+        forward();
 
         //10
         int multiRounds=0;
@@ -169,7 +185,7 @@ public class App
         }
         System.out.println("");
 
-
+        forward();
 
         //11
         String tal1="";
@@ -195,9 +211,7 @@ public class App
             System.out.println("");
         }
 
-        System.out.println("Enter to continue ");
-        Scanner waiting = new Scanner(System.in);
-        String oki =waiting.nextLine(); // holds actual input
+        forward();
 
         //12
         int[][] diagonalArrays = new int[3][3];
@@ -213,27 +227,33 @@ public class App
         }
         System.out.println("");
 
+        forward();
+
         //13
+        System.out.println("");
         int randomArrays[] = {1,8,9,2,7,4,5,6,3};
         int sortedArrays[] = new int[9];
         int lenghtRight = randomArrays.length-1;
         int lenghtLeft = 0;
+        System.out.printf("Random array: ");
         for (int i=0;i<randomArrays.length;i++){
             System.out.printf(randomArrays[i] + " ");
         }
         for (int i=0;i<randomArrays.length;i++) {
             if (randomArrays[i]%2==0) {
                sortedArrays[lenghtRight] = randomArrays[i];
+               lenghtRight--;
             }else{
                 sortedArrays[lenghtLeft] = randomArrays[i];
                 lenghtLeft++;
             }
         }
         System.out.println("");
+        System.out.printf("Sorted array: ");
         for (int i=0;i<randomArrays.length;i++){
             System.out.printf(sortedArrays[i] + " ");
         }
-
+        System.out.println("");
 
 
 
@@ -275,6 +295,11 @@ public class App
         System.out.printf("");
         return newArray;
     }
-
+    public static void forward(){
+        System.out.println("Enter to continue ");
+        Scanner waiting = new Scanner(System.in);
+        String oki =waiting.nextLine(); // holds actual input
+        System.out.println("");
+    }
 
 }
