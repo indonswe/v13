@@ -1,19 +1,9 @@
 package org.example;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
-
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
-
-/**
- * Hello world!
- *
- */
-public class App 
+public class App
 {
     public static void main( String[] args ) {
         //1
